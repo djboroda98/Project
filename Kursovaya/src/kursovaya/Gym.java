@@ -41,16 +41,13 @@ public class Gym {
         JLabel label1 = new JLabel("<html><p align='left'>Добро пожаловать <br> в Спорт Зал</p></html>"); 
         label1.setFont(new Font("Arial", Font.PLAIN, 30));
         label1.setForeground(Color.BLUE);
-        JLabel label2 = new JLabel(new ImageIcon("myimage/_MG_2978.jpg"));
+        JLabel label2 = new JLabel(new ImageIcon("myimage/myimage/_MG_2978.jpg"));
         JLabel label3 = new JLabel("<html><p align='left'>Понедельник: с 8:00 - 23:00<br> " +
                 "Вторник: с 8:00 - 23:00 <br>" + "Среда: с 8:00 - 23:00 <br>" + 
                 "Четверг: с 8:00 - 23:00 <br> " + "Пятница: с 8:00 - 23:00 <br>" +
                 "Суббота: с 10:00 - 23:00 <br>"+ "Воскресенье: с 10:00 - 23:00 <br></p></html> ");
         label3.setFont(font);
         label3.setHorizontalTextPosition(JLabel.LEFT);
-//        label1.setAlignmentX(JComponent.LEFT_ALIGNMENT);
-//        label2.setAlignmentX(JComponent.LEFT_ALIGNMENT);
-//        label3.setAlignmentX(JComponent.LEFT_ALIGNMENT);
         JRadioButton radioButton1 = new JRadioButton("Записаться");
         radioButton1.setActionCommand("Записаться");
         radioButton1.setSelected(false);
@@ -94,8 +91,6 @@ public class Gym {
         Box mainBox = Box.createVerticalBox();
         mainBox.setBackground(Color.WHITE);
         mainBox.setBorder(new EmptyBorder(12,12,12,12));
-//        mainBox.add(label2);
-//        mainBox.add(label1);
         mainBox.add(panel1);
         mainBox.add(Box.createVerticalStrut(12));
         mainBox.add(panel2);

@@ -28,7 +28,7 @@ public class Room {
        JPanel panel1 = new JPanel();
        JPanel panel2 = new JPanel();
        toggleButton = new JToggleButton("Оставить заявку", 
-               new ImageIcon("64px/flag.png"),false);
+               new ImageIcon("myimage/64px/flag.png"),false);
        
        JLabel label1 = new JLabel("Площадь (м^2): ");
        JLabel label1A = new JLabel("< >");

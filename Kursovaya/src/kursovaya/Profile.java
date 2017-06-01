@@ -124,7 +124,7 @@ public class Profile {
         
         Box box12 = Box.createHorizontalBox();
         box12.add(Box.createHorizontalGlue());
-        BufferedImage originalImage = ImageIO.read(new File("myimage/no-ava.png" ));
+        BufferedImage originalImage = ImageIO.read(new File("myimage/myimage/no-ava.png" ));
             int width = 200;
             int height = 200;
             Image image= originalImage.getScaledInstance(width, height, Image.SCALE_AREA_AVERAGING);
@@ -132,15 +132,15 @@ public class Profile {
             Graphics2D graphics2D = changedImage.createGraphics();
             graphics2D.drawImage(image, 0, 0, null);
             graphics2D.dispose();
-            ImageIO.write(changedImage,"png", new File("myimage/no-ava2.png"));
-            JButton imageButton= new JButton(new ImageIcon("myimage/no-ava2.png"));
+            ImageIO.write(changedImage,"png", new File("myimage/myimage/no-ava2.png"));
+            JButton imageButton= new JButton(new ImageIcon("myimage/myimage/no-ava2.png"));
             imageButton.setMaximumSize(new Dimension(200, 200));
             imageButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
             imageButton.setOpaque(true);
             imageButton.setBackground(Color.WHITE);
             imageButton.setBorder(null);
             JLabel imageLabel = new JLabel();
-            ImageIcon icon = new ImageIcon("myimage/no-ava.png");
+            ImageIcon icon = new ImageIcon("myimage/myimage/no-ava.png");
             imageLabel.setIcon(icon);
             JPanel  imagePanel = new JPanel();
             imagePanel.add(imageLabel);

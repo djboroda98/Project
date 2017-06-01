@@ -30,7 +30,7 @@ public class DataBase {
     try{
       Class.forName("com.mysql.jdbc.Driver");
       connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=convertToNull",
-           "root", "roman9roman8");
+           "root", "");
       statement = connection.createStatement();
       resultSet = statement.executeQuery("select * from student");
       while (resultSet.next()) {

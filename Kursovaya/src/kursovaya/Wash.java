@@ -36,7 +36,7 @@ public class Wash {
         Font font = new Font("Verdana", Font.PLAIN, 14);
         
         JLabel label1 = new JLabel("<html><p align='left'>Стирка</p></html>",
-                new ImageIcon("myimage/stiralnaja-mashina.gif"), SwingConstants.RIGHT); 
+                new ImageIcon("myimage/myimage/stiralnaja-mashina.gif"), SwingConstants.RIGHT); 
         
         label1.setFont(new Font("Arial", Font.PLAIN, 35));
         label1.setForeground(Color.ORANGE);
@@ -94,12 +94,12 @@ public class Wash {
                
                if(Math.random()> Math.random()){
                    JOptionPane.showMessageDialog(null, "Приходите, сейчас свободно",null,0,
-                       new ImageIcon("myimage/running.png"));
+                       new ImageIcon("myimage/myimage/running.png"));
                }
                
                else
                JOptionPane.showMessageDialog(null, "Извините, но вам придется подождать",null,0,
-                      new ImageIcon("myimage/clock.png") );
+                      new ImageIcon("myimage/myimage/clock.png") );
                    
                 }
             

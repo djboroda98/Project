@@ -64,8 +64,8 @@ public class News {
         Box box = Box.createVerticalBox();
         panel.add(editor);
         panel.setBackground(Color.WHITE);
-        JButton  button = new JButton(new ImageIcon("64px/arrow-left.png"));
-        JButton  button2 = new JButton(new ImageIcon("64px/x.png"));
+        JButton  button = new JButton(new ImageIcon("myimage/64px/arrow-left.png"));
+        JButton  button2 = new JButton(new ImageIcon("myimage/64px/x.png"));
         button.setBackground(Color.WHITE);
         button2.setBackground(Color.WHITE);
         //panel2.setAlignmentX(JComponent.LEFT_ALIGNMENT);

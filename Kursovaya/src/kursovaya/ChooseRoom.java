@@ -13,37 +13,23 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
-import javax.swing.Action;
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
 
 
-/**
- *
- * @author Student
- */
+
 import layout.TableLayout;
 
 public class ChooseRoom extends Room implements ActionListener {
- private JButton[] button;
+ 
+    private JButton[] button;
  private JFrame[] dialog;
  private final double d = 1.3;
  private JPanel panelRoom;
 public  void ChooseRoom(int k, JPanel panel) {
-//        
-//        JFrame frame = new JFrame("ETU8");
-//        frame.setSize(900, 550);
-//        frame.setLocationRelativeTo(null);
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.setVisible(true);
-      
-        
+    
+    
         panel.setOpaque(true);
         panel.setBackground(Color.WHITE);
         
@@ -51,11 +37,8 @@ public  void ChooseRoom(int k, JPanel panel) {
             {d*50,d*50,d*50,d*50,d*15,d*35,d*30,d*20,d*20,d*30,d*50,d*50,d*50,d*50,d*50}, 
             {d*50,d*20,d*30,d*35,d*10,d*20,d*20,d*10,d*20,d*20}});
         
-//        Border border = BorderFactory.createCompoundBorder(
-//        null, BorderFactory.createLineBorder(Color.BLACK, 2));
         panel.setLayout(tableLayout);
         panel.setMaximumSize(new Dimension(600,235));
-//        panel.setBorder(border);
         
         HashMap<String, Component> hash = new HashMap<>();
         for (int i = 0; i < 15; i++) {
@@ -119,16 +102,8 @@ public  void ChooseRoom(int k, JPanel panel) {
         panel.add(new JButton("↓"), "12,4,12,5");
         panel.add(button[10], "12,6,12,9");
         panel.add(button[11], "13,4,13,9");
-       
-      
-//        panel.add(new JButton(), "");
-//        panel.add(new JButton(), "");
-//        panel.add(new JButton(), "");
-        
-//       panel.revalidate();
-      panel.repaint();
 
-        //frame.setContentPane(panel);
+        
     }
 
    
@@ -155,26 +130,6 @@ public  void ChooseRoom(int k, JPanel panel) {
                      }
              }
                      
-     }} 
+     }
+} 
    
-
-
-
-//    public static void main(String[] args) {
-//        SwingUtilities.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                JFrame frame = new JFrame("ETU8");
-//        frame.setSize(900, 550);
-//        frame.setLocationRelativeTo(null);
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.setVisible(true);
-//                JPanel panel12 = new JPanel();
-//                ChooseRoom chooseRoom = new ChooseRoom();
-//                chooseRoom.ChooseRoom(1,panel12);
-//        frame.setContentPane(panel12);
-//            }
-//
-//        });
-//    }
-}

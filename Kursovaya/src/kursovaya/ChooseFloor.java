@@ -47,8 +47,8 @@ public class ChooseFloor {
         JPanel panelUp = new JPanel();
         panelUp.setBackground(Color.WHITE);
         panelUp.setLayout(new GridLayout(0,3,0,5));
-        JButton button1 = new JButton(new ImageIcon("64px/arrow-up.png"));
-        JButton button2 = new JButton(new ImageIcon("64px/arrow-down.png"));
+        JButton button1 = new JButton(new ImageIcon("myimage/64px/arrow-up.png"));
+        JButton button2 = new JButton(new ImageIcon("myimage/64px/arrow-down.png"));
         JTextField textField = new JTextField("1",5);
         textField.setFont(font);
         textField.setHorizontalAlignment(0);
@@ -102,7 +102,7 @@ public class ChooseFloor {
         hash2.put("2", panelUp);
         
         JPanel panelDown = new JPanel();
-        JButton buttonLeft = new JButton(new ImageIcon("64px/arrow-left.png"));
+        JButton buttonLeft = new JButton(new ImageIcon("myimage/64px/arrow-left.png"));
         panelDown.setLayout(new FlowLayout(FlowLayout.LEFT));
         panelDown.setBackground(Color.WHITE);
         panelDown.add(buttonLeft);

@@ -50,12 +50,12 @@ public class Hotel {
         
         //ПАНЕЛЬ ГЛАВНОГО МЕНЮ
          panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
-         JButton button1 = new JButton("Заселиться",new ImageIcon("64px/key.png"));
-         JButton button2 = new JButton("Услуги Общежития",new ImageIcon("64px/magicwand.png"));
-         JButton button3 = new JButton("Переехать", new ImageIcon("64px/ufo.png"));
-         JButton button4 = new JButton("Фотогалерея",new ImageIcon("64px/image.png"));
-         JButton button5 = new JButton("Информация об общежитии",new ImageIcon("64px/news.png"));
-         JButton button6 = new JButton("Съехать",new ImageIcon("64px/shoeprints.png"));
+         JButton button1 = new JButton("Заселиться",new ImageIcon("myimage/64px/key.png"));
+         JButton button2 = new JButton("Услуги Общежития",new ImageIcon("myimage/64px/magicwand.png"));
+         JButton button3 = new JButton("Переехать", new ImageIcon("myimage/64px/ufo.png"));
+         JButton button4 = new JButton("Фотогалерея",new ImageIcon("myimage/64px/image.png"));
+         JButton button5 = new JButton("Информация об общежитии",new ImageIcon("myimage/64px/news.png"));
+         JButton button6 = new JButton("Съехать",new ImageIcon("myimage/64px/shoeprints.png"));
          
          addMyJButton(button1);
          addMyJButton(button2);
@@ -75,12 +75,12 @@ public class Hotel {
         //ПАНЕЛЬ ЛИЧНОГО КАБИНЕТА
         
          panel3.setLayout(new BoxLayout(panel3, BoxLayout.Y_AXIS));
-         JButton button7 = new JButton("Посмотреть профиль",new ImageIcon("64px/contacts.png"));
-         JButton button8 = new JButton("Редактировать профиль",new ImageIcon("64px/compose.png"));
-         JButton button9 = new JButton("Мои счета", new ImageIcon("64px/creditcard.png"));
-         JButton button10 = new JButton("Мои услуги",new ImageIcon("64px/colorwheel.png"));
-         JButton button11= new JButton("Настройки",new ImageIcon("64px/tools.png"));
-         JButton button12= new JButton("Выйти из аккаунта",new ImageIcon("64px/door.png"));
+         JButton button7 = new JButton("Посмотреть профиль",new ImageIcon("myimage/64px/contacts.png"));
+         JButton button8 = new JButton("Редактировать профиль",new ImageIcon("myimage/64px/compose.png"));
+         JButton button9 = new JButton("Мои счета", new ImageIcon("myimage/64px/creditcard.png"));
+         JButton button10 = new JButton("Мои услуги",new ImageIcon("myimage/64px/colorwheel.png"));
+         JButton button11= new JButton("Настройки",new ImageIcon("myimage/64px/tools.png"));
+         JButton button12= new JButton("Выйти из аккаунта",new ImageIcon("myimage/64px/door.png"));
          addMyJButton(button7);
          addMyJButton(button8);
          addMyJButton(button9);
@@ -99,12 +99,12 @@ public class Hotel {
          JPanel panel4 = new JPanel();
          
          panel4.setLayout(new BoxLayout(panel4, BoxLayout.Y_AXIS));
-         JButton button13 = new JButton("Стирка",new ImageIcon("64px/water.png"));
-         JButton button14 = new JButton("Спорт Зал",new ImageIcon("64px/trophy.png"));
-         JButton button15= new JButton("Уборка комнаты", new ImageIcon("64px/recycle.png"));
-         JButton button16 = new JButton("Библиотека",new ImageIcon("64px/bookshelf.png"));
-         JButton button17= new JButton("Кино",new ImageIcon("64px/video.png"));
-         JButton button18= new JButton(new ImageIcon("64px/arrow-left.png"));
+         JButton button13 = new JButton("Стирка",new ImageIcon("myimage/64px/water.png"));
+         JButton button14 = new JButton("Спорт Зал",new ImageIcon("myimage/64px/trophy.png"));
+         JButton button15= new JButton("Уборка комнаты", new ImageIcon("myimage/64px/recycle.png"));
+         JButton button16 = new JButton("Библиотека",new ImageIcon("myimage/64px/bookshelf.png"));
+         JButton button17= new JButton("Кино",new ImageIcon("myimage/64px/video.png"));
+         JButton button18= new JButton(new ImageIcon("myimage/64px/arrow-left.png"));
          
          addMyJButton(button13);
          addMyJButton(button14);
@@ -125,14 +125,14 @@ public class Hotel {
         
          //ПАНЕЛЬ НОВОСТЕЙ
          panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
-         JButton buttonNews = new JButton(new ImageIcon("64px/play.png"));
+         JButton buttonNews = new JButton(new ImageIcon("myimage/64px/play.png"));
          buttonNews.setBackground(Color.WHITE);
          panel2.add(buttonNews);
          panel2.setBackground(Color.WHITE);
          
-         tabbedPane.addTab("Главное меню",new ImageIcon("myimage/power.png"), panel1);
-         tabbedPane.addTab("Новости",new ImageIcon("myimage/globe.png"), panel2);
-         tabbedPane.addTab("Личный кабинет",new ImageIcon("myimage/profle.png"), panel3);
+         tabbedPane.addTab("Главное меню",new ImageIcon("myimage/myimage/power.png"), panel1);
+         tabbedPane.addTab("Новости",new ImageIcon("myimage/myimage/globe.png"), panel2);
+         tabbedPane.addTab("Личный кабинет",new ImageIcon("myimage/myimage/profle.png"), panel3);
         
         frame.setContentPane(tabbedPane);
         
@@ -161,12 +161,10 @@ public class Hotel {
             @Override
             public void actionPerformed(ActionEvent e){
                 tabbedPane.removeAll();
-                tabbedPane.addTab("Услуги Общежития", new ImageIcon("myimage/magicwand.png"), panel4);
-                tabbedPane.addTab("Новости",new ImageIcon("myimage/globe.png"), panel2);
-                tabbedPane.addTab("Личный кабинет",new ImageIcon("myimage/profle.png"), panel3);
-//                  tabbedPane.setTabComponentAt(0, panel4);
-//                  tabbedPane.setIconAt(0, new ImageIcon("myimage/magicwand.png"));
-//                  tabbedPane.setToolTipTextAt(0, "Услуги Общежития");
+                tabbedPane.addTab("Услуги Общежития", new ImageIcon("myimage/myimage/magicwand.png"), panel4);
+                tabbedPane.addTab("Новости",new ImageIcon("myimage/myimage/globe.png"), panel2);
+                tabbedPane.addTab("Личный кабинет",new ImageIcon("myimage/myimage/profle.png"), panel3);
+//                  
             }
         });
         
@@ -291,9 +289,9 @@ public class Hotel {
             @Override
             public void actionPerformed(ActionEvent e){
                 tabbedPane.removeAll();
-                tabbedPane.addTab("Главное меню",new ImageIcon("myimage/power.png"), panel1);
-                tabbedPane.addTab("Новости",new ImageIcon("myimage/globe.png"), panel2);
-                tabbedPane.addTab("Личный кабинет",new ImageIcon("myimage/profle.png"), panel3);
+                tabbedPane.addTab("Главное меню",new ImageIcon("myimage/myimage/power.png"), panel1);
+                tabbedPane.addTab("Новости",new ImageIcon("myimage/myimage/globe.png"), panel2);
+                tabbedPane.addTab("Личный кабинет",new ImageIcon("myimage/myimage/profle.png"), panel3);
 //                  
             }
         });

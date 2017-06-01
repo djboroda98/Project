@@ -20,14 +20,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.SwingUtilities;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage; 
 import java.awt.Image;
-import java.awt.event.MouseAdapter;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 
 /**
@@ -37,23 +34,15 @@ import java.util.logging.Logger;
 public class PhotoGallery implements ActionListener {
     
          private JFrame[] dialog;
-         private  JLabel[] imageLabel;
-         private  JPanel[] imagePanel;
+         private JLabel[] imageLabel;
+         private JPanel[] imagePanel;
          private ImageIcon[] icon;
          private JButton[] button;
          private String[] names;
 
     
  public void PhotoGallery(String stringPhoto, JPanel mainPanel) throws IOException{
-        
-       
-            
-//        JFrame frame = new JFrame("ETU8");
-//        frame.setSize(800,800);
-//        frame.setLocationRelativeTo(null);
-//        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
-        
+
         File file = new File(stringPhoto);
         names = file.list();
         
@@ -65,9 +54,7 @@ public class PhotoGallery implements ActionListener {
         dialog = new JFrame[names.length];
         imageLabel = new JLabel[names.length];
         imagePanel = new JPanel[names.length];
-//      panelForScrollPane = new JPanel[names.length];
         icon = new ImageIcon[names.length];
-//        scrollPane2 = new JScrollPane[names.length];
         
         BufferedImage[] originalImage = new BufferedImage[names.length];
         int width = 200;
@@ -103,15 +90,7 @@ public class PhotoGallery implements ActionListener {
              
              imagePanel[i].setLayout(new FlowLayout(FlowLayout.CENTER));
              imagePanel[i].add(imageLabel[i]);
-//             scrollPane2[i] = new JScrollPane(imagePanel[i]);
-//             scrollPane2[i].setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-//             scrollPane2[i].setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-//             panelForScrollPane[i].setLayout(new BorderLayout());
-//             panelForScrollPane[i].add(scrollPane2[i], BorderLayout.CENTER);
-             
              button[i].addActionListener((ActionListener) this);
-            
-             //dialog[i].removeAll();
              dialog[i].dispose();
             
             
@@ -121,54 +100,30 @@ public class PhotoGallery implements ActionListener {
           scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
           scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
           
-         // mainPanel = new JPanel();
+       
           mainPanel.setLayout(new BorderLayout());
-        
           mainPanel.add(scrollPane,BorderLayout.CENTER);
           mainPanel.setOpaque(true);
           mainPanel.setBackground(Color.WHITE);
           
-        
-//         frame.add(mainPanel, BorderLayout.CENTER);
-//         frame.pack();
-//         
-//         frame.setBackground(Color.WHITE);
-//         frame.setVisible(true);
-//         
-         
-     
     }
     
-    
-//    public static void main(String[] args){
-//        
-//         SwingUtilities.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-////                
-//                PhotoGallery phG = new PhotoGallery();
-//                try {
-//                    phG.PhotoGallery("nature");
-//                }   catch (IOException ex) {
-//                    Logger.getLogger(PhotoGallery.class.getName()).log(Level.SEVERE, null, ex);
-//                }
-//            }
-//        });
-//        
-//    }
+
  
     @Override
      public void actionPerformed(ActionEvent e) {
          Object source = e.getSource();   
          for(int i = 0; i < names.length;i++){
              if(source == button[i]){
+                     
                      dialog[i].setSize(800,800);
                      dialog[i].setLocationRelativeTo(null);
                      dialog[i].setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                      dialog[i].setVisible(true);
                      dialog[i].setLayout(new BorderLayout(0,0));
-                     dialog[i].add(imagePanel[i]);
-                     dialog[i].pack();
+                     dialog[i].add((imagePanel[i]));
+                     
+                     //dialog[i].pack();
              }
                      
      }}

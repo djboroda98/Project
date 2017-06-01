@@ -64,7 +64,7 @@ public class ChoosePhotoAlbum {
          
             for (int i=0; i <button.length; i++) {
             int j=i+1;
-            button[i] = new JButton("Папка " + j ,new ImageIcon("64px/folder.png"));
+            button[i] = new JButton("Папка " + j ,new ImageIcon("myimage/64px/folder.png"));
             
             button[i].setMaximumSize(new Dimension(100, 100));
             button[i].setFont(font);
@@ -83,10 +83,10 @@ public class ChoosePhotoAlbum {
                 
                 PhotoGallery phG = new PhotoGallery();
                 try {
-                    phG.PhotoGallery("1", panel2);
+                    phG.PhotoGallery("myimage/1", panel2);
                     tabbedPane.removeAll();
-                    tabbedPane.addTab("" , new ImageIcon("myimage/arrow-left.png"), new JPanel());
-                    tabbedPane.addTab("Папка 1" ,new ImageIcon("myimage/folder.png"), panel2 );
+                    tabbedPane.addTab("" , new ImageIcon("myimage/myimage/arrow-left.png"), new JPanel());
+                    tabbedPane.addTab("Папка 1" ,new ImageIcon("myimage/myimage/folder.png"), panel2 );
                     tabbedPane.setSelectedIndex(1);
                     tabbedPane.addMouseListener(new MouseAdapter() {
                     @Override
@@ -94,7 +94,7 @@ public class ChoosePhotoAlbum {
                     //int idx = ((JTabbedPane)e.getSource()).indexAtLocation(e.getX(), e.getY());
                     if(((JTabbedPane)e.getSource()).indexAtLocation(e.getX(), e.getY()) == 0){
                     tabbedPane.removeAll();
-                    tabbedPane.addTab("Фотогалерея",new ImageIcon("myimage/image.png"), fullPanel1);
+                    tabbedPane.addTab("Фотогалерея",new ImageIcon("myimage/myimage/image.png"), fullPanel1);
             }}
         });
                 }   catch (IOException ex) {
@@ -108,18 +108,17 @@ public class ChoosePhotoAlbum {
                 
             PhotoGallery phG = new PhotoGallery();
                 try {
-                    phG.PhotoGallery("3", panel3);
+                    phG.PhotoGallery("myimage/3", panel3);
                     tabbedPane.removeAll();
-                    tabbedPane.addTab("" , new ImageIcon("myimage/arrow-left.png"), new JPanel());
-                    tabbedPane.addTab("Папка 2" ,new ImageIcon("myimage/folder.png"), panel3 );
+                    tabbedPane.addTab("" , new ImageIcon("myimage/myimage/arrow-left.png"), new JPanel());
+                    tabbedPane.addTab("Папка 2" ,new ImageIcon("myimage/myimage/folder.png"), panel3 );
                     tabbedPane.setSelectedIndex(1);
                     tabbedPane.addMouseListener(new MouseAdapter() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
-                    //int idx = ((JTabbedPane)e.getSource()).indexAtLocation(e.getX(), e.getY());
                     if(((JTabbedPane)e.getSource()).indexAtLocation(e.getX(), e.getY()) == 0){
                     tabbedPane.removeAll();
-                    tabbedPane.addTab("Фотогалерея",new ImageIcon("myimage/image.png"), fullPanel1);
+                    tabbedPane.addTab("Фотогалерея",new ImageIcon("myimage/myimage/image.png"), fullPanel1);
             }}
         });
                 }   catch (IOException ex) {
@@ -129,38 +128,11 @@ public class ChoosePhotoAlbum {
         
             }
         });
-          button[2].addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-               // tabbedPane.addTab("Папка 3" ,new ImageIcon("myimage/folder.png"), new JPanel() );
-            }
-        });
-          button[3].addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-                //tabbedPane.addTab("Папка 4" ,new ImageIcon("myimage/folder.png"), new JPanel() );
-            }
-        });
-          button[4].addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-                //tabbedPane.addTab("Папка 5" ,new ImageIcon("myimage/folder.png"), new JPanel() );
-            }
-        });
-          button[5].addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-               // tabbedPane.addTab("Папка 6" ,new ImageIcon("myimage/folder.png"), new JPanel() );
-            }
-        });
+
             
            
           
-           JButton buttonLeft= new JButton(new ImageIcon("64px/arrow-left.png"));
+           JButton buttonLeft= new JButton(new ImageIcon("myimage/64px/arrow-left.png"));
            buttonLeft.setMaximumSize(new Dimension(100, 100));
            buttonLeft.setOpaque(true);
            buttonLeft.setBackground(Color.WHITE);
@@ -184,7 +156,7 @@ public class ChoosePhotoAlbum {
            fullPanel1.add(buttonLeft);
            
            
-           tabbedPane.addTab("Фотогалерея",new ImageIcon("myimage/image.png"), fullPanel1);
+           tabbedPane.addTab("Фотогалерея",new ImageIcon("myimage/myimage/image.png"), fullPanel1);
          
           
          
